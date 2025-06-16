@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Roslagen Live</title>
+  <title>Välkommen till Roslagen Live</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
@@ -11,39 +11,37 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     html, body {
       height: 100%;
       font-family: sans-serif;
     }
-
     body {
       display: flex;
       flex-direction: column;
+      background-image: url('roslagenlive-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
     }
-
     header {
       background-image: url('roslagen-header-himmel.png');
       background-size: cover;
       background-position: center;
       height: 250px;
       padding: 3rem;
-      color: white;
       text-align: center;
     }
-
     main {
       flex: 1;
-      background-image: url('roslagenlive-bg.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
       padding: 3rem 2rem 2rem;
-      color: white;
-      text-align: center;
+      max-width: 1280px;
+      margin: 0 auto;
     }
-
+    section {
+      margin-bottom: 3rem;
+    }
     .media-grid {
       display: flex;
       flex-wrap: wrap;
@@ -52,7 +50,6 @@
       margin: 2rem auto;
       max-width: 1280px;
     }
-
     .media-item {
       flex: 1 1 300px;
       max-width: 400px;
@@ -61,42 +58,13 @@
       overflow: hidden;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     }
-
-    .media-item iframe {
+    .media-item img, .media-item iframe {
       width: 100%;
       height: 100%;
+      object-fit: cover;
       border: 0;
+      display: block;
     }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-
-    .button-row a {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      backdrop-filter: blur(5px);
-    }
-
-    .button-row a:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    }
-
     footer {
       padding: 1.5rem;
       font-size: 0.875rem;
@@ -104,31 +72,15 @@
       color: #ccc;
       background: #000000aa;
     }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-
-      .button-row a {
-        flex: 1 1 100%;
-        justify-content: center;
-      }
-    }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>Välkommen till Roslagen Live</h1>
-  <p>Skärgård. Humor. Gemenskap.</p>
+  <h3>Välkommen till</h3>
+  <h1>Roslagen Live</h1>
 </header>
 
 <main>
-
   <div class="media-grid">
     <!-- YouTube-video -->
     <div class="media-item">
@@ -148,49 +100,32 @@
       </iframe>
     </div>
 
-    <!-- Tredje modul (placeholder) -->
+    <!-- Janne Westerlund -->
     <div class="media-item">
-      <a href="https://stockholmcomedyclub.com/" target="_blank" style="display:block; width:100%; height:100%;">
-        <img src="cropped-stockholm-comedy-club.png" alt="Stockholm Comedy Club" style="width:100%; height:100%; object-fit:cover; border-radius:12px;" />
+      <a href="https://www.facebook.com/KomikerJanneWesterlund" target="_blank">
+        <img src="janne_westerlund_preview.jpg" alt="Janne Westerlund">
       </a>
     </div>
-
-
-    <div class="button-row">
-    <a href="https://www.tickster.com/se/sv/events/by/k7d6jl5a2t1ln21/norrtalje-comedy" target="_blank">
-      <i class="fas fa-ticket-alt"></i> Tickster
-    </a>
-    <a href="https://www.facebook.com/roslagenlive" target="_blank">
-      <i class="fab fa-facebook"></i> Facebook
-    </a>
-    <a href="https://www.instagram.com/roslagen.live/" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="mailto:roslagenlive@gmail.com">
-      <i class="fas fa-envelope"></i> Email
-    </a>
   </div>
-    <section id="om">
-      <h2>Om Roslagen Live</h2>
-      <p>Roslagen Live startade som en nätbaserad radiostation och blev senare en poddplattform med rötter i Norrtälje. Sedan 2020 har vi sänt till över 33 länder världen över. Målet är att förmedla skärgårdskänsla på ett personligt, lekfullt och humoristiskt sätt – med standup, kultur, evenemang och intervjuer.</p>
-    </section>
 
-    <section>
-      <h2>Janne Westerlund</h2>
-      <img src="janne_westerlund_preview.jpg" alt="Janne Westerlund">
-      <p><strong>Janne Westerlund</strong> (f. 1971) är ståuppkomiker, programledare och arrangör. Debuterade 1992 på klubben Patricia i Stockholm, grundade Stockholm Comedy Klubb, leder Skrattstock sedan 2002 och har medverkat i radio/TV och röstskådespeleri.</p>
-      <p><a href="https://www.facebook.com/KomikerJanneWesterlund" target="_blank" style="color:#ffcc00">Följ Janne på Facebook</a></p>
-    </section>
+  <section id="om">
+    <h2>Om Roslagen Live</h2>
+    <p>Roslagen Live startade som en nätbaserad radiostation och blev senare en poddplattform med rötter i Norrtälje. Sedan 2020 har vi sänt till över 33 länder världen över. Målet är att förmedla skärgårdskänsla på ett personligt, lekfullt och humoristiskt sätt – med standup, kultur, evenemang och intervjuer.</p>
+  </section>
 
-    <section>
-      <h2>Vilka finns bakom?</h2>
-      <p>Utöver Janne har vi haft många lokala profiler med – musiker, kulturpersonligheter och nya komiker från Roslagen. Och så finns våra två döldis‑tekniker: alltid redo att rädda sändningen – men så hemliga att vi inte ens vet var de håller hus. 😉</p>
-    </section>
+  <section>
+    <h2>Janne Westerlund – komikern</h2>
+    <p><strong>Janne Westerlund</strong> (f. 1971) är ståuppkomiker, programledare och arrangör. Debuterade 1992 på klubben Patricia i Stockholm, grundade Stockholm Comedy Klubb, leder Skrattstock sedan 2002 och har medverkat i radio/TV och röstskådespeleri.</p>
+  </section>
+
+  <section>
+    <h2>Vilka finns bakom?</h2>
+    <p>Utöver Janne har vi haft många lokala profiler med – musiker, kulturpersonligheter och nya komiker från Roslagen. Och så finns våra två döldis‑tekniker: alltid redo att rädda sändningen – men så hemliga att vi inte ens vet var de håller hus. 😉</p>
+  </section>
 </main>
 
 <footer>
-  © 2025 Roslagen Live
+  &copy; 2025 Roslagen Live
 </footer>
-
 </body>
 </html>
